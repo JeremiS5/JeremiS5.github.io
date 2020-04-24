@@ -60,7 +60,7 @@ function updateDate() {
 setInterval(getLocationAndWeather, 180000)
 
 var weatherData = {
-	city: document.querySelector ("#city"),
+	/*city: document.querySelector ("#city"),*/
 	weather: document.querySelector ("#weather"),
 	temperature: document.querySelector("#temperature"),
 	temperatureValue: 0,
@@ -83,7 +83,7 @@ function getLocationAndWeather(){
 			latitude: response.latitude,
 			longitude: response.longitude
 		};
-		var cityName = response.city;
+		/*var cityName = response.city;*/
 
 		var weatherSimpleDescription = response.weather.simple;
 		var weatherDescription = response.weather.description;
@@ -91,7 +91,7 @@ function getLocationAndWeather(){
 
 		weatherData.temperatureValue = weatherTemperature;
 
-		weatherData.city.innerHTML = cityName;
+		/*weatherData.city.innerHTML = cityName;*/
 		weatherData.weather.innerHTML =  weatherDescription;
 		weatherData.temperature.innerHTML = weatherTemperature + weatherData.units;
 	}, false);
