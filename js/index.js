@@ -11,15 +11,15 @@ function updateTime() {
 	let m = now.getMinutes().toString();
 	let h = now.getHours().toString();
 	
-	/*
+	
 	var dd = "am";
 	var hh = h;
-	*/
+	
 
 	if (m.length === 1) m = "0"+m;
 	if (h.length === 1) h = "0"+h;
 	
-	/*
+	
 	if (h >= 12) {
 		h = hh - 12;
 		dd = "pm";
@@ -27,9 +27,9 @@ function updateTime() {
 	if (h == 0) {
 		h = 12;
 	}
-	*/
+	
 
-	let output = h + ":" + m;
+	let output = hh + ":" + m + dd;
 
 	document.getElementById("current-time").innerHTML = output;
 }
