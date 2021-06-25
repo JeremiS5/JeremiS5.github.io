@@ -1,4 +1,22 @@
 /*
+    My functions
+*/
+
+window.onload = function () {
+  var input = document.getElementById('searchinput');
+  input.focus();
+  input.select();
+}
+
+
+
+
+
+
+
+
+
+/*
 	Date and Time
 */
 
@@ -36,7 +54,7 @@ function updateTime() {
 
 function updateDate() {
 	
-	let months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "nov", "dec"];
+	let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "november", "december"];
 
 	let now = new Date();
 	let d = now.getDate();
@@ -93,7 +111,7 @@ function getLocationAndWeather(){
 
 		/*weatherData.city.innerHTML = cityName;*/
 		weatherData.weather.innerHTML =  weatherDescription;
-		weatherData.temperature.innerHTML = weatherTemperature + weatherData.units;
+		weatherData.temperature.innerHTML = Math.round(weatherTemperature) + weatherData.units;
 	}, false);
 
 	xhr.addEventListener("error", function(err){
