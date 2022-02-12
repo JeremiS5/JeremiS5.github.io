@@ -47,7 +47,7 @@ function updateTime() {
 	}
 	
 
-	let output = hh + ":" + m + dd;
+	let output = h + ":" + m + dd;
 
 	document.getElementById("current-time").innerHTML = output;
 }
