@@ -1,6 +1,6 @@
 /*
     My functions
-*/
+*/ /*
 
 window.onload = function () {
   var input = document.getElementById('searchinput');
@@ -73,12 +73,12 @@ function updateDate() {
 
 /*
 	Weather
-*/
+*/ /*
 
 setInterval(getLocationAndWeather, 180000)
 
 var weatherData = {
-	/*city: document.querySelector ("#city"),*/
+	//city: document.querySelector ("#city"),
 	weather: document.querySelector ("#weather"),
 	temperature: document.querySelector("#temperature"),
 	temperatureValue: 0,
@@ -101,7 +101,7 @@ function getLocationAndWeather(){
 			latitude: response.latitude,
 			longitude: response.longitude
 		};
-		/*var cityName = response.city;*/
+		//var cityName = response.city;
 
 		var weatherSimpleDescription = response.weather.simple;
 		var weatherDescription = response.weather.description;
@@ -109,7 +109,7 @@ function getLocationAndWeather(){
 
 		weatherData.temperatureValue = weatherTemperature;
 
-		/*weatherData.city.innerHTML = cityName;*/
+		//weatherData.city.innerHTML = cityName;
 		weatherData.weather.innerHTML =  weatherDescription;
 		weatherData.temperature.innerHTML = Math.round(weatherTemperature) + weatherData.units;
 	}, false);
@@ -123,11 +123,11 @@ function getLocationAndWeather(){
 	} else {
 		alert("Unable to fetch the location and weather data.");
 	}
-} getLocationAndWeather();
+} getLocationAndWeather(); 
 
 /*
 	Search
-*/
+*/ /*
 
 var search = document.getElementById("search");
 var help = document.getElementById("search-help");
@@ -213,7 +213,7 @@ search.addEventListener("keydown", function(e) {
 	}
 });
 
-/* Fix for Android keycode 229 issue */
+// Fix for Android keycode 229 issue 
 var prevWord = "";
 function isBackspace(val) {
 	var bool = val && val.length < prevWord.length;
@@ -231,7 +231,7 @@ for (var i = 0; i < commands.length; i++) {
 
 /*
 	Quotes
-*/
+*/ /*
 
 setInterval(start, 900000);
 
